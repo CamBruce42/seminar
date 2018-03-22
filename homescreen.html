@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="homescreen.css">
+<script src="homescreen.js"></script>
+
+<div id = 'addToCart' class = "addToCart">
+	<span class="close">&times;</span>
+	<p>text</p>
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Appetizers')">Appetizers</button>
+  <button class="tablinks" onclick="openTab(event, 'Entrees')">Entrees</button>
+  <button class="tablinks" onclick="openTab(event, 'Desserts')">Desserts</button>
+</div>
+
+<!-- Tab content -->
+<div id="Appetizers" class="tabcontent">
+<button style = "button" onclick = "test()">test</button>
+	<menuHeader>Appetizers</menuHeader>
+		<div class = "row">
+			<div class = "column" id = "onions" onclick = "openAddToCart()">
+				<div>
+					<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
+					<div class = "foodHeader">Onion Rings</div>
+					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>					
+				</div>
+			</div>
+			<div class = "column">
+					<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
+					<div class = "foodHeader">Fried Green Beans</div>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "column">
+					<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
+					<div class = "foodHeader">Breaded Pickles</div>
+					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
+			</div>
+			<div class = "column">
+					<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
+					<div class = "foodHeader">BBQ Nachos</div>
+			</div>
+		</div>
+		
+</div>
+
+<div id="Entrees" class="tabcontent">
+  <h3>Entrees</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Desserts" class="tabcontent">
+  <h3>Dessert</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
