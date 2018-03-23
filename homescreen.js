@@ -18,25 +18,37 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
 window.onload = function getVariables(){
-var modal = document.getElementById('addToCart');
+	
+	var modal = document.getElementById('addToCart');
 
-var btn = document.getElementsByClassName("column");
-
-var span = document.getElementsByClassName("close")[0];
-console.log("got variables");
+	var span = document.getElementsByClassName("close")[0];
+	console.log("got variables");
 }
 
 function openAddToCart(){
+	var modal = document.getElementById('addToCart');
 	console.log("helllo");
 	modal.style.display = "block";
 }
-//span.onclick = function(){
-//	modal.style.display = "none";
-//}
+
+/* window.onclick = function(event){
+	console.log("click");
+	var span = document.getElementsByClassName("close")[0];
+	if(event.target == span){
+		modal.style.display = "none";
+		console.log("a");
+	}
+}  */
 
 window.onclick = function(event){
+	var span = document.getElementsByClassName("close")[0];
+	var modal = document.getElementById('addToCart');
 	if(event.target == modal){
+		modal.style.display = "none";
+	}
+	else if(event.target == span){
 		modal.style.display = "none";
 	}
 }

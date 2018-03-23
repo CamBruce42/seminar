@@ -1,9 +1,21 @@
+<meta charset="UTF-8"> 
 <link rel="stylesheet" href="homescreen.css">
 <script src="homescreen.js"></script>
 
-<div id = 'addToCart' class = "addToCart">
-	<span class="close">&times;</span>
-	<p>text</p>
+<div id = "addToCart" class = "addToCart">
+	<div class="modal-content">
+		<div class="modal-header">
+		  <span class = "close" id = "close">&times;</span>
+		  <h2>Modal Header</h2>
+		</div>
+		<div class="modal-body">
+		  <p>Some text in the Modal Body</p>
+		  <p>Some other text...</p>
+		</div>
+		<div class="modal-footer">
+		  <h3>Modal Footer</h3>
+		</div>
+	</div>
 </div>
 
 <div class="tab">
@@ -14,7 +26,6 @@
 
 <!-- Tab content -->
 <div id="Appetizers" class="tabcontent">
-<button style = "button" onclick = "test()">test</button>
 	<menuHeader>Appetizers</menuHeader>
 		<div class = "row">
 			<div class = "column" id = "onions" onclick = "openAddToCart()">
