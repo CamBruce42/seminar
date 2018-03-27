@@ -103,7 +103,7 @@ menuHeader{
     animation-duration: 0.4s;
 }
 .modal-footer {
-    padding: 2px 16px;
+    padding: 28px 16px;
     background-color: #898989;
     color: white;
 }
@@ -112,7 +112,10 @@ menuHeader{
     background-color: #898989;
     color: white;
 }
-.modal-body {padding: 2px 16px;}
+.modal-body {
+	padding: 2px 16px;
+	overflow: hidden;
+}
 .close {
     color: #aaaaaa;
     float: right;
@@ -125,4 +128,13 @@ menuHeader{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.confirm{
+	position:absolute;
+     bottom:2;
+     right:2;
+	padding: 3px;
+}
+.rowOne{
+	border-bottom:1px solid black;
 }

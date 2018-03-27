@@ -1,0 +1,24 @@
+{
+	"Items" : [
+		{
+			"callNumber":1,
+			"menuItem":"Fried Onions",
+			"cost": 4.75
+		},
+		{
+			"callNumber":2,
+			"menuItem":"Fried Green Beans",
+			"cost": 4.75
+		},
+		{
+			"callNumber":3,
+			"menuItem":"Breaded Pickles",
+			"cost": 4.25
+		},
+		{
+			"callNumber":4,
+			"menuItem":"BBQ Nachos",
+			"cost": 5.75
+		},
+	]
+}

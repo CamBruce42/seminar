@@ -1,19 +1,19 @@
 <meta charset="UTF-8"> 
 <link rel="stylesheet" href="homescreen.css">
 <script src="homescreen.js"></script>
+<script src ="jsonConfig.js"></script>
 
 <div id = "addToCart" class = "addToCart">
 	<div class="modal-content">
 		<div class="modal-header">
 		  <span class = "close" id = "close">&times;</span>
-		  <h2>Modal Header</h2>
+		  <h2>Are you sure?</h2>
 		</div>
-		<div class="modal-body">
-		  <p>Some text in the Modal Body</p>
-		  <p>Some other text...</p>
+		<div class="modal-body" id = "modal-body">
+		  <p>You are about to add <span id = "menuItem"></span> to your cart.</p>
 		</div>
 		<div class="modal-footer">
-		  <h3>Modal Footer</h3>
+			<button id = "confirm" class = "confirm" onclick = "addToCart()">Confirm</button>
 		</div>
 	</div>
 </div>
@@ -28,25 +28,23 @@
 <div id="Appetizers" class="tabcontent">
 	<menuHeader>Appetizers</menuHeader>
 		<div class = "row">
-			<div class = "column" id = "onions" onclick = "openAddToCart()">
-				<div>
+			<div class = "column" data-cost="4.75" data-name="Onion Rings" id = "onions" onclick = "openAddToCart(event), generate_table()">
 					<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
 					<div class = "foodHeader">Onion Rings</div>
 					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>					
-				</div>
 			</div>
-			<div class = "column">
+			<div class = "column" data-cost="4.75" data-name="Fried Green Beans" id = "fried green beans" onclick = "openAddToCart(event), generate_table()">
 					<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
 					<div class = "foodHeader">Fried Green Beans</div>
 			</div>
 		</div>
 		<div class = "row">
-			<div class = "column">
+			<div class = "column" data-cost="4.25" data-name="Breaded Pickles" id = "breaded pickles" onclick = "openAddToCart(event), generate_table()">
 					<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
 					<div class = "foodHeader">Breaded Pickles</div>
 					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
 			</div>
-			<div class = "column">
+			<div class = "column" data-cost="5.75" data-name="BBQ Nachos" id = "bbq nachos" onclick = "openAddToCart(event), generate_table()">
 					<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
 					<div class = "foodHeader">BBQ Nachos</div>
 			</div>
