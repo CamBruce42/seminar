@@ -1,7 +1,9 @@
 var menuCost;
 var menuName;
 var total = 0;
-var grandTotal = 0;
+var itemsInCart = 1;
+var myArrayCost = [];
+var myArrayItem = [];
 
 function openTab(evt, tabName) {
     // Declare all variables
@@ -58,27 +60,20 @@ window.onclick = function(event){
 		modal.style.display = "none";
 	}
 }
-var itemsInCart = 1;
-var myArrayCost = [];
-var myArrayItem = [];
 
 function addToCart(){
 	itemsInCart += 1;
 	myArrayCost.push(parseFloat(menuCost,10));
 	myArrayItem.push(menuName);
-	console.log(myArrayItem[1]);
 }
 function generate_table() {
-	
 	  if(document.getElementById("cartTotal") || document.getElementById("currentItem")){
 		 var elem = document.getElementById('cartTotal');
 		 var elem1 = document.getElementById('currentItem');
 		 elem.parentNode.removeChild(elem);
 		 elem1.parentNode.removeChild(elem1);
 	 }
-	 
 	var body = document.getElementById("modal-body");
-	
 	//create 1st table that goes through cart
 	var tbl = document.createElement("table");
 	var tblBody = document.createElement("tbody");
@@ -114,7 +109,6 @@ function generate_table() {
 			var item;
 			var cost;
 			item = myArrayItem[p];
-			console.log(myArrayItem[p]);
 			cost = myArrayCost[p];
 			var row = document.createElement("tr");
 				for(var j = 0; j<2; j++){
@@ -131,11 +125,8 @@ function generate_table() {
 			}
 			tblBody.appendChild(row);
 			p++;
-		}
-		  
+		}	  
 	  }
-	
-	 
 	  // put the <tbody> in the <table>
 	  tbl.appendChild(tblBody);
 	  // appends <table> into <body>
@@ -159,11 +150,9 @@ function generate_table() {
 			}
 			else if(j ==1){				
 				total = myArrayCost.reduce(getSum, 0);
-				if(total){
-					
-					total = (total+(parseFloat(menuCost)));
-					var cellText = document.createTextNode("$" + total.toFixed(2)); // adds the cost to the table
-				}
+				total = (total+(parseFloat(menuCost)));
+				var cellText = document.createTextNode("$" + total.toFixed(2)); // adds the cost to the table
+				
 			}
 			cell.appendChild(cellText);//appends the value
 			topRow.appendChild(cell); //appends the value

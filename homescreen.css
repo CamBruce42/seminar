@@ -3,7 +3,9 @@
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
-
+menuHeader{
+	color: black;
+}
 /* Style the buttons inside the tab */
 .tab button {
     background-color: inherit;
@@ -30,12 +32,15 @@
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-top: none;
+	background-color: #fffdd0;
+	
 }
 
 .foodImage{
 	height : 100;
+	box-shadow: 5px 2px gray;
 
 }
 
@@ -55,12 +60,15 @@
     flex: 50%;
     padding: 10px;
 	margin-right: 10px;
-	border: solid 1px gray;
+	border: solid .5px gray;
+	box-shadow: 5px 2px gray;
+	background-color: white;
 }
 .column:hover{
 	cursor: pointer;
 	background-color: gray;
-	border: 2px solid black;
+	box-shadow: 5px 2px black;
+
 }
 menuHeader{
 	font-size: 66px;
@@ -69,6 +77,11 @@ menuHeader{
 	margin-top: 10px;
 	float: right;
 	clear: both;
+}
+.foodPrice{
+	float:left;
+	clear:both;
+	font-weight: bold;
 }
 .orderButton{
 	margin-top: 20px;
