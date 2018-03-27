@@ -3,8 +3,12 @@
     border: 1px solid #ccc;
     background-color: #f1f1f1;
 }
+body{
+	font-family: 'Roboto', sans-serif;
+}
 menuHeader{
-	color: black;
+	font-family: 'Roboto', sans-serif;
+	color: white;
 }
 /* Style the buttons inside the tab */
 .tab button {
@@ -34,7 +38,7 @@ menuHeader{
     padding: 6px 12px;
     border: 2px solid #ccc;
     border-top: none;
-	background-color: #fffdd0;
+	background-image: url(images/background.png);
 	
 }
 

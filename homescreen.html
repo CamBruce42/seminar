@@ -1,68 +1,70 @@
 <meta charset="UTF-8"> 
 <link rel="stylesheet" href="homescreen.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <script src="homescreen.js"></script>
-
-<div id = "addToCart" class = "addToCart">
-	<div class="modal-content">
-		<div class="modal-header">
-		  <span class = "close" id = "close">&times;</span>
-		  <h2>Are you sure?</h2>
-		</div>
-		<div class="modal-body" id = "modal-body">
-		  <p>You are about to add <span id = "menuItem"></span> to your cart.</p>
-		</div>
-		<div class="modal-footer">
-			<button id = "confirm" class = "confirm" onclick = "addToCart()">Confirm</button>
+<body>
+	<div id = "addToCart" class = "addToCart">
+		<div class="modal-content">
+			<div class="modal-header">
+			  <span class = "close" id = "close">&times;</span>
+			  <h2>Are you sure?</h2>
+			</div>
+			<div class="modal-body" id = "modal-body">
+			  <p>You are about to add <span id = "menuItem"></span> to your cart.</p>
+			</div>
+			<div class="modal-footer">
+				<button id = "confirm" class = "confirm" onclick = "addToCart()">Confirm</button>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Appetizers')">Appetizers</button>
-  <button class="tablinks" onclick="openTab(event, 'Entrees')">Entrees</button>
-  <button class="tablinks" onclick="openTab(event, 'Desserts')">Desserts</button>
-</div>
+	<div class="tab">
+	  <button class="tablinks" onclick="openTab(event, 'Appetizers')">Appetizers</button>
+	  <button class="tablinks" onclick="openTab(event, 'Entrees')">Entrees</button>
+	  <button class="tablinks" onclick="openTab(event, 'Desserts')">Desserts</button>
+	</div>
 
-<!-- Tab content -->
-<div id="Appetizers" class="tabcontent">
-	<menuHeader>Appetizers</menuHeader>
-		<div class = "row">
-			<div class = "column" data-cost="4.75" data-name="Onion Rings" id = "onions" onclick = "openAddToCart(event), generate_table()">
-					<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
-					<div class = "foodHeader">Onion Rings</div>
-					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
-					<div class = "foodPrice">$4.75</div>
+	<!-- Tab content -->
+	<div id="Appetizers" class="tabcontent">
+		<menuHeader>Appetizers</menuHeader>
+			<div class = "row">
+				<div class = "column" data-cost="4.75" data-name="Onion Rings" id = "onions" onclick = "openAddToCart(event), generate_table()">
+						<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
+						<div class = "foodHeader">Onion Rings</div>
+						<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
+						<div class = "foodPrice">$4.75</div>
+				</div>
+				<div class = "column" data-cost="4.75" data-name="Fried Green Beans" id = "fried green beans" onclick = "openAddToCart(event), generate_table()">
+						<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
+						<div class = "foodHeader">Fried Green Beans</div>
+						<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
+						<div class = "foodPrice">$4.75</div>
+				</div>
 			</div>
-			<div class = "column" data-cost="4.75" data-name="Fried Green Beans" id = "fried green beans" onclick = "openAddToCart(event), generate_table()">
-					<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
-					<div class = "foodHeader">Fried Green Beans</div>
-					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
-					<div class = "foodPrice">$4.75</div>
+			<div class = "row">
+				<div class = "column" data-cost="4.25" data-name="Breaded Pickles" id = "breaded pickles" onclick = "openAddToCart(event), generate_table()">
+						<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
+						<div class = "foodHeader">Breaded Pickles</div>
+						<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
+						<div class = "foodPrice">$4.25</div>
+				</div>
+				<div class = "column" data-cost="5.75" data-name="BBQ Nachos" id = "bbq nachos" onclick = "openAddToCart(event), generate_table()">
+						<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
+						<div class = "foodHeader">BBQ Nachos</div>
+						<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
+						<div class = "foodPrice">$5.75</div>
+				</div>
 			</div>
-		</div>
-		<div class = "row">
-			<div class = "column" data-cost="4.25" data-name="Breaded Pickles" id = "breaded pickles" onclick = "openAddToCart(event), generate_table()">
-					<img class = "foodImage" src="images/oranges.jpeg" alt="oranges" > 
-					<div class = "foodHeader">Breaded Pickles</div>
-					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
-					<div class = "foodPrice">$4.25</div>
-			</div>
-			<div class = "column" data-cost="5.75" data-name="BBQ Nachos" id = "bbq nachos" onclick = "openAddToCart(event), generate_table()">
-					<img class = "foodImage" src="images/burger.jpeg" alt="burger" > 
-					<div class = "foodHeader">BBQ Nachos</div>
-					<div class = "foodDescription">Tasty onion rings that come with a dipping sauce of your choice!</div>
-					<div class = "foodPrice">$5.75</div>
-			</div>
-		</div>
-		
-</div>
+			
+	</div>
 
-<div id="Entrees" class="tabcontent">
-  <h3>Entrees</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
+	<div id="Entrees" class="tabcontent">
+	  <h3>Entrees</h3>
+	  <p>Paris is the capital of France.</p> 
+	</div>
 
-<div id="Desserts" class="tabcontent">
-  <h3>Dessert</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
+	<div id="Desserts" class="tabcontent">
+	  <h3>Dessert</h3>
+	  <p>Tokyo is the capital of Japan.</p>
+	</div>
+</body>
