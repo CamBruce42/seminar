@@ -5,6 +5,7 @@ var itemsInCart = 1;
 var myArrayCost = [];
 var myArrayItem = [];
 
+
 function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
