@@ -155,3 +155,12 @@ menuHeader{
 .rowOne{
 	border-bottom:1px solid black;
 }
+.checkout{
+	position:absolute;
+     bottom:2;
+     right:2;
+	display: none;
+	float: right;
+	clear: both;
+	padding: 3px;
+}

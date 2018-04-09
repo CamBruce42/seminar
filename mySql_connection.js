@@ -1,5 +1,13 @@
-var mysql = requirejs('mysql');
+var mysql = require('mysql');
 
+require("jsdom").env("", function(err, window) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+ 
+    var $ = require("jquery")(window);
+});
 var con = mysql.createConnection({
   host: "localhost",
   user: "cameron",
@@ -17,10 +25,3 @@ con.connect(function(err) {
   });
 });
 
-function addToTable(lastName,phoneNumber,totalPrice){
-	var tableAdd = "INSERT INTO orderDetails(orderLastName, orderPhoneNum, totalPrice) VALUES(lastName, phoneNumber, totalPrice)";
-	con.query (tableAdd, function (err,result){
-	  if (err) throw err;
-	  console.log("Record Added");
-  });
-}

@@ -45,6 +45,8 @@ function openAddToCart(elt){
 	menuName = menuItem.dataset.name;
 	document.getElementById("menuItem").innerHTML = menuName;
 	modal.style.display = "block";
+	document.getElementById("confirm").style.display = "inline-block";
+	document.getElementById("checkout").style.display = "none";
 }
 
 window.onclick = function(event){
@@ -58,7 +60,8 @@ window.onclick = function(event){
 		modal.style.display = "none";
 	}
 	else if(event.target == confirmButton){
-		modal.style.display = "none";
+		document.getElementById('checkout').style.display = "inline-block";
+		confirmButton.style.display = "none";
 	}
 }
 
@@ -66,6 +69,7 @@ function addToCart(){
 	itemsInCart += 1;
 	myArrayCost.push(parseFloat(menuCost,10));
 	myArrayItem.push(menuName);
+	document.getElementById('checkout').style.dispaly = "inline";
 }
 function generate_table() {
 	  if(document.getElementById("cartTotal") || document.getElementById("currentItem")){
@@ -169,6 +173,9 @@ function generate_table() {
 }
 function getSum(total, num) {
 	return total + num;
+}
+function checkout(){
+
 }
 
 
